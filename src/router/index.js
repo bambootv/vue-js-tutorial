@@ -23,30 +23,39 @@ const routes = [
     path: "/brazil",
     name: "Brazil",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Brazil.vue")
+      import(/* webpackChunkName: "brazil" */ "../views/Brazil.vue")
   },
   {
     path: "/panama",
     name: "Panama",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Panama.vue")
+      import(/* webpackChunkName: "panama" */ "../views/Panama.vue")
   },
   {
     path: "/hawaii",
     name: "Hawaii",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Hawaii.vue")
+      import(/* webpackChunkName: "hawaii" */ "../views/Hawaii.vue")
   },
   {
     path: "/jamaica",
     name: "Jamaica",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Jamaica.vue")
+      import(/* webpackChunkName: "jamaica" */ "../views/Jamaica.vue")
+  },
+  {
+    path: "/details",
+    name: "DestinationDetails",
+    component: () =>
+      import(
+        /* webpackChunkName: "destinationDetails" */ "../views/DestinationDetails.vue"
+      )
   }
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  linkExactActiveClass: "vue-school-active-class"
 });
 
 export default router;
